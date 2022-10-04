@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author Alfred
+ *
+ */
+module thirdProject {
+}
