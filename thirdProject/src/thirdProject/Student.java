@@ -1,6 +1,7 @@
 package thirdProject;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class Student {
     // get student marks, get total marks, get max marks, get min marks, get average.
@@ -9,7 +10,7 @@ public class Student {
     public String name;
     public int[] marks;
 
-    public Student(String currentStudent, int[] studentMarks) {
+    public Student(String currentStudent, int... studentMarks) {
 	this.name = currentStudent;
 	this.marks = studentMarks;
     }
@@ -56,7 +57,7 @@ public class Student {
 	BigDecimal bigDecimalSum = new BigDecimal(firstStudentSum);
 	BigDecimal bigDecimalCount = new BigDecimal(firstStudentSubjects);
 	// divide the sum by the arr length to get avg
-	BigDecimal averageBigDecimal = bigDecimalSum.divide(bigDecimalCount);
+	BigDecimal averageBigDecimal = bigDecimalSum.divide(bigDecimalCount, 3, RoundingMode.UP);
 
 	return averageBigDecimal;
     }

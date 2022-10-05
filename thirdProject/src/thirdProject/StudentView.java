@@ -7,10 +7,10 @@ public class StudentView {
 
 	// init some fake data.
 	// init new instance
-	int[] marks1 = { 88, 72, 96, 98 };
-	int[] marks2 = { 99, 66, 60, 89 };
+	//	int[] marks1 = { 88, 72, 96, 98 };
+	//	int[] marks2 = { 99, 66, 60, 89 };
 	String[] classList = { "Allen", "Dave", "Cherie", "Bray", "Jim" };
-	Student firstStudent = new Student(classList[0], marks1);
+	Student firstStudent = new Student(classList[0], 93, 55, 66, 78, 51, 89, 68);
 
 	int firstStudentSubjects = firstStudent.getNumberOfSubjects();
 	System.out.printf("Total subjects are: %d", firstStudentSubjects).println();
@@ -21,7 +21,6 @@ public class StudentView {
 	System.out.printf("Lowest mark for %s is %d", firstStudent.name, firstStudent.minMark()).println();
 	System.out.printf("Average mark for %s is ", firstStudent.name)
 	.println(firstStudent.avgMark(firstStudentSum, firstStudentSubjects));
-	System.out.println(firstStudent.avgMark(firstStudentSum, firstStudentSubjects).getClass());
     }
 
 }
